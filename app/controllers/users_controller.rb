@@ -12,12 +12,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     
     if @user.save
+      log_in @user
       flash[:success] = "ようこそ"
       redirect_to @user
     else
-      @user.errors.full_messages.each do |message|
-        puts message
-      end
       render "new"
     end
   end
