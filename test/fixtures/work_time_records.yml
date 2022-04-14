@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  work_from: 2022-04-14 19:33:24
+  work_to: 2022-04-14 19:33:24
+  break_from: 2022-04-14 19:33:24
+  break_to: 2022-04-14 19:33:24
+
+two:
+  work_from: 2022-04-14 19:33:24
+  work_to: 2022-04-14 19:33:24
+  break_from: 2022-04-14 19:33:24
+  break_to: 2022-04-14 19:33:24
