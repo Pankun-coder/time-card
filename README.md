@@ -1,5 +1,7 @@
 # README
 
+##rights
+
 This app is created based on rails tutorial sample app,
 which is published with the MIT license and the Beerware license.
 
@@ -30,7 +32,7 @@ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 OR OTHER DEALINGS IN THE SOFTWARE.
 
-////////////////////////////////////////////////////////////
+
 
 THE BEERWARE LICENSE (Revision 42)
 
@@ -38,3 +40,11 @@ Michael Hartl wrote this code. As long as you retain
 this notice you can do whatever you want with this stuff.
 If we meet some day, and you think this stuff is worth it,
 you can buy me a beer in return.
+
+
+
+
+
+##deployment
+
+this app is deployed at https://mighty-anchorage-92449.herokuapp.com/
