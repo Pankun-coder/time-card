@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="w-full bg-blue-300">
   <head>
     <title>MyApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,15 +11,15 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="w-full">
     <%= render 'layouts/header' %>
-    <div class="container">
+    <div class="container w-full mx-auto">
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
       <%= yield %>
-      <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
     </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
