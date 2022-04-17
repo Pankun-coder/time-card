@@ -7,7 +7,7 @@ ruby "3.1.1"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem "bcrypt"
 gem 'rails-controller-testing'
-gem "nokogiri"
+gem "nokogiri", ">= 1.13.4"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
