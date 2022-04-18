@@ -1,2 +1,28 @@
-<%= @user.name %>, <%= @user.email %>
-<%= link_to "打刻する", "/stamping/new" %>
+
+<div class="text-center">
+  <h2 class="text-5xl"><%= "ようこそ、#{@user.name}さん" %></h2>
+<%= link_to "打刻する", "/stamping/new", {class:"text-4xl"} %>
+<h2 class="text-4xl">直近の勤務履歴</h2>
+<div>
+  <% if @pastRecords %>
+    <% @pastRecords.each do |pastRecord| %>
+      <p>
+        <a>勤務時間:</a>
+        <%= pastRecord.work_from %>
+        <a>から</a>
+        <%= pastRecord.work_to %>
+        <a>まで</a>
+      </p>
+      <p>
+        <a>内休憩時間</a>
+        <%= pastRecord.break_from %>
+        <a>から</a>
+        <%= pastRecord.break_to %>
+        <a>まで</a>
+      </p>
+    <% end %>
+  <% else %>
+    <p>なし</p>
+  <% end %>
+</div>
+</div>

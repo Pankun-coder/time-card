@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   get "stamping/new", to: "stamping#new"
+  post "stamping/new", to: "stamping#create"
   resources :users
 end

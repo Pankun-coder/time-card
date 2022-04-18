@@ -6,14 +6,18 @@ end
 
 class StampingController < ApplicationController
   def new
-    @record = WorkTimeRecords.new
+    @record = WorkTimeRecord.new
   end
   
   def create
-    @record = WorkTimeRecords.new(record_param)
+    @record = WorkTimeRecord.new(record_params)
     @record.user = session[:user_id]
     if @record.save
       puts @record.user
+      puts "succeed"
+      flash[:success] = "正常に打刻されました"
+    else
+      puts "not recorded"
     end
   end
   
@@ -21,7 +25,7 @@ class StampingController < ApplicationController
   
   private
   def record_params
-    params.require(:record).permit(:work_from, :work_to, :break_from,
+    params.require(:work_time_record).permit(:work_from, :work_to, :break_from,
                                  :break_to)
   end
 end

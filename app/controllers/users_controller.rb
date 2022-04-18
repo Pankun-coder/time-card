@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @pastRecords = WorkTimeRecord.where(user: session[:user_id]) 
   end
 
   def new

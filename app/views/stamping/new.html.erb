@@ -1,10 +1,10 @@
 
-<% provide(:title, "Log in") %>
+<% provide(:title, "Record") %>
 <h1>Log in</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_with(model: @record, url: stamping_new_path) do |f| %>
+    <%= form_with(model: @record, url: stamping_new_path, data: { turbo: false }) do |f| %>
       
       <%= f.label :work_from %>
       <%= f.time_select :work_from, class: 'form-control' %>
@@ -13,12 +13,12 @@
       <%= f.time_select :work_to, class: 'form-control' %>
       
       <%= f.label :break_from %>
-      <%= f.time_select :work_from, class: 'form-control' %>
+      <%= f.time_select :break_from, class: 'form-control' %>
       
       <%= f.label :break_to %>
-      <%= f.time_select :work_from, class: 'form-control' %>
+      <%= f.time_select :break_to, class: 'form-control' %>
 
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+      <%= f.submit "Send", class: "btn btn-primary" %>
     <% end %>
 
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
