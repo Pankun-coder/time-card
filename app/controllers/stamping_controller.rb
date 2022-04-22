@@ -10,8 +10,9 @@ class StampingController < ApplicationController
   end
   
   def create
-    @record = WorkTimeRecord.new(record_params)
-    @record.user = session[:user_id]
+    @user = User.find(session[:user_id])
+    @record = @user.WorkTimeRecords.new(record_params)
+    puts User.find(session[:user_id])
     if @record.save
       puts @record.user
       puts "succeed"
